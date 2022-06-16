@@ -39,20 +39,16 @@
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
 
-/* ROTARY ENCODERS */
-#define ENCODERS_PAD_A \
-    { D7, C7 }
-#define ENCODERS_PAD_B \
-    { D6, C6 }
-
-#define ENCODER_RESOLUTION 4
+#define RGB_DI_PIN D5
+#ifdef RGB_DI_PIN
+#    define RGBLIGHT_ANIMATIONS
+#    define RGBLED_NUM 26
+#    define RGBLIGHT_HUE_STEP 8
+#    define RGBLIGHT_SAT_STEP 8
+#    define RGBLIGHT_VAL_STEP 8
+#    define RGBLIGHT_SLEEP
+#endif
 
 #define DEBOUNCE 5
 
 #define LOCKING_SUPPORT_ENABLE
-
-//#define RGB_DI_PIN D5
-//#define RGBLED_NUM 4
-
-//#define DRIVER_LED_TOTAL RGBLED_NUM
-//#define RGBLIGHT_DEFAULT_HUE 130

@@ -13,22 +13,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "synapse.h"
 
-// bool encoder_update_kb(uint8_t index, bool clockwise) {
-//     if (!encoder_update_user(index, clockwise)) { return false; }
-//     if (index == 1) { /* left encoder*/
-//                 if (clockwise){
-//                     tap_code(KC_WH_U);
-//                 } else {
-//                     tap_code(KC_WH_D);
-//                 }
-//     } else if (index == 0) { /* right encoder */
-//                 if (clockwise){
-//                     tap_code(KC_VOLU);
-//                 } else {
-//                     tap_code(KC_VOLD);
-//         }
-//     }
-//     return true;
-// }
+#pragma once
+
+#define VIAL_KEYBOARD_UID \
+    { 0x0B, 0x89, 0xF1, 0xBD, 0x17, 0xC4, 0xD7, 0x2E }
+
+#define VIAL_UNLOCK_COMBO_ROWS \
+    { 0, 2 }
+#define VIAL_UNLOCK_COMBO_COLS \
+    { 0, 0 }
+
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5
