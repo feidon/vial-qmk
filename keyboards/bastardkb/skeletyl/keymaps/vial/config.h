@@ -1,0 +1,16 @@
+
+#pragma once
+
+#define VIAL_KEYBOARD_UID \
+    { 0x3E, 0x83, 0x48, 0xE5, 0x36, 0xFC, 0x0D, 0x47 }
+
+#define VIAL_UNLOCK_COMBO_ROWS \
+    { 0, 2 }
+#define VIAL_UNLOCK_COMBO_COLS \
+    { 0, 0 }
+
+#define DYNAMIC_KEYMAP_LAYER_COUNT 4
+
+// #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+// #define RGB_MATRIX_KEYPRESSES
+#define VIALRGB_NO_DIRECT
