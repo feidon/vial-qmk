@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "url": "https://bastardkb.com/skeletyl",
+=======
+    "url": "https://www.bastardkb.com/skeletyl",
+>>>>>>> 6085c442ceddc80644ba290359ae69bbf0996652
     "usb": {
         "pid": "0x1830",
     },

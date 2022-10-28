@@ -1,5 +1,6 @@
 /*
  * Copyright 2021 Quentin LEBASTARD <qlebastard@gmail.com>
+ * Copyright 2022 Charly Delay <charly@codesink.dev> (@0xcharly)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,29 +17,31 @@
  */
 
 #pragma once
-#include "config_common.h"
-#define VENDOR_ID 0xA8F8
-#define PRODUCT_ID 0x1830
-#define DEVICE_VER 0x0001
-#define MANUFACTURER Bastard Keyboards
-#define PRODUCT Skeletyl
 
-#define MATRIX_ROWS 8
+#include "config_common.h"
+
+/* Key matrix configuration. */
+#define MATRIX_ROWS 8 // Rows are doubled-up.
 #define MATRIX_COLS 5
-#define RGBLIGHT_LIMIT_VAL 180
-#define MATRIX_ROW_PINS { B5, F7, F6, B6 }
-#define MATRIX_COL_PINS { E6, C6, B1, B3, B2 }
 
 #define DIODE_DIRECTION ROW2COL
 
+<<<<<<< HEAD
 #define RGB_DI_PIN D2
 #define RGBLED_NUM 36
 #define RGBLED_SPLIT { 18, 18 }
 
+=======
+/* Set 0 if debouncing isn't needed. */
+>>>>>>> 6085c442ceddc80644ba290359ae69bbf0996652
 #define DEBOUNCE 5
 
-#define SOFT_SERIAL_PIN D0
+/* RGB settings. */
+#define RGBLED_NUM 36
+#define RGBLED_SPLIT \
+    { 18, 18 }
 
+<<<<<<< HEAD
 #define SPLIT_TRANSPORT_MIRROR
 #define DRIVER_LED_TOTAL RGBLED_NUM
 #define RGB_MATRIX_SPLIT RGBLED_SPLIT
@@ -102,3 +105,15 @@
 // #    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 // #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 // #endif
+=======
+/* RGB matrix support. */
+#ifdef RGB_MATRIX_ENABLE
+#    define SPLIT_TRANSPORT_MIRROR
+#    define DRIVER_LED_TOTAL RGBLED_NUM
+#    define RGB_MATRIX_SPLIT RGBLED_SPLIT
+#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 50
+#    define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
+#    define RGB_DISABLE_WHEN_USB_SUSPENDED
+#    define RGB_MATRIX_KEYPRESSES
+#endif
+>>>>>>> 6085c442ceddc80644ba290359ae69bbf0996652
